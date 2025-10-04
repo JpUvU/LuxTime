@@ -1,0 +1,171 @@
+/* === Estilos Globales === */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background: #f9f9f9;
+    color: #333;
+}
+
+h1, h2, h3 {
+    margin: 0.5em 0;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background: #111;
+    color: #fff;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #444;
+}
+
+/* === HEADER === */
+header {
+    background: #111;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+}
+
+header nav {
+    margin-top: 10px;
+}
+
+header nav a {
+    margin: 0 10px;
+    color: #fff;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    color: #f0c040;
+}
+
+/* === BANNER con carrusel animado === */
+.banner {
+    display: flex;
+    overflow: hidden;
+    height: 300px;
+    position: relative;
+}
+
+.banner .slide {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #333;
+    color: #fff;
+    min-width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    animation: fade 15s infinite;
+}
+
+.banner .slide:nth-child(2) {
+    animation-delay: 5s;
+}
+
+.banner .slide:nth-child(3) {
+    animation-delay: 10s;
+}
+
+.banner h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+@keyframes fade {
+    0% {opacity: 0;}
+    10% {opacity: 1;}
+    30% {opacity: 1;}
+    40% {opacity: 0;}
+    100% {opacity: 0;}
+}
+
+/* === GRID de relojes destacados === */
+.featured {
+    padding: 40px 20px;
+    text-align: center;
+    background: #fff;
+}
+
+.featured h2 {
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    color: #111;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    width: 200px;
+    text-align: center;
+    background: #fafafa;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+}
+
+.card span {
+    display: block;
+    margin: 5px 0;
+    color: goldenrod;
+    font-size: 1.2em;
+}
+
+/* === Sección de Historia Resumida === */
+.about {
+    background: #f4f4f4;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.about p {
+    max-width: 600px;
+    margin: 0 auto 20px;
+    font-size: 1.1em;
+}
+
+/* === FOOTER === */
+footer {
+    background: #111;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1em;
+    font-size: 0.9em;
+}
