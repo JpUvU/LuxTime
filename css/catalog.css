@@ -81,10 +81,14 @@ header nav a:hover {
 
 .card img {
     width: 100%;
+    height: 220px; /* Tamaño uniforme para todas las imágenes */
+    object-fit: contain; /* Mantiene proporción sin deformar */
     border-radius: 8px;
     margin-bottom: 10px;
+    background-color: #fff; /* Fondo neutro si la imagen no llena el espacio */
     transition: transform 0.3s ease;
 }
+
 
 .card h3 {
     font-size: 1.1em;

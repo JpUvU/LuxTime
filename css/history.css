@@ -1,0 +1,263 @@
+/* === ESTILOS GENERALES === */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  
+  /* === HEADER === */
+  .site-header {
+    background-color: #111;
+    color: #fff;
+    padding: 1em 0;
+  }
+  
+  .header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .brand {
+    font-size: 1.4em;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .main-nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 1em;
+    font-size: 0.95em;
+    transition: color 0.3s ease;
+  }
+  
+  .main-nav a:hover {
+    color: #f0c040;
+  }
+  
+  /* === INTRO === */
+  .intro {
+    text-align: center;
+    padding: 2em 0;
+  }
+  
+  .intro h1 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+  }
+  
+  .intro p {
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1em;
+  }
+  
+  /* === TIMELINE === */
+  .timeline-section {
+    margin: 3em 0;
+  }
+  
+  .timeline-section h2 {
+    text-align: center;
+    margin-bottom: 0.5em;
+    font-size: 1.5em;
+  }
+  
+  .timeline-section p {
+    text-align: center;
+    color: #777;
+    font-size: 0.95em;
+  }
+  
+  .timeline-wrap {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 1em;
+    scroll-snap-type: x mandatory;
+  }
+  
+  .event {
+    flex: 0 0 260px;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    padding: 1em;
+    scroll-snap-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+  }
+  
+  .event:hover {
+    transform: translateY(-5px);
+  }
+  
+  .event time {
+    color: #f0c040;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5em;
+  }
+  
+  .event h3 {
+    margin-bottom: 0.3em;
+    font-size: 1.1em;
+  }
+  
+  .event p {
+    color: #555;
+    font-size: 0.95em;
+  }
+  
+  /* === GALERÍA === */
+  .gallery-section {
+    margin: 3em 0;
+    text-align: center;
+  }
+  
+  .gallery-section h2 {
+    margin-bottom: 0.5em;
+  }
+  
+  .mosaic {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 1em;
+  }
+  
+  .mosaic img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    transition: transform 0.3s ease;
+  }
+  
+  .mosaic img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* === VIDEO Y TESTIMONIOS === */
+  .media-testimonials {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 3em 0;
+  }
+  
+  .media {
+    flex: 1 1 55%;
+  }
+  
+  .media h2 {
+    margin-bottom: 0.5em;
+  }
+  
+  .media video {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background: #000;
+  }
+  
+  .testimonials {
+    flex: 1 1 40%;
+  }
+  
+  .testimonials h3 {
+    margin-bottom: 0.8em;
+  }
+  
+  blockquote {
+    background-color: #fff;
+    border-left: 4px solid #f0c040;
+    padding: 1em;
+    margin-bottom: 1em;
+    border-radius: 6px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  }
+  
+  blockquote p {
+    color: #444;
+    font-size: 0.95em;
+  }
+  
+  blockquote cite {
+    display: block;
+    margin-top: 0.5em;
+    color: #777;
+    font-size: 0.9em;
+  }
+  
+  /* === FOOTER === */
+  .site-footer {
+    background-color: #111;
+    color: #fff;
+    padding: 1em 0;
+    margin-top: 3em;
+  }
+  
+  .footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 0.9em;
+  }
+  
+  .footer-right a {
+    color: #f0c040;
+    text-decoration: none;
+    margin-left: 1em;
+    transition: opacity 0.3s ease;
+  }
+  
+  .footer-right a:hover {
+    opacity: 0.8;
+  }
+  
+  /* === RESPONSIVO === */
+  @media (max-width: 768px) {
+    .media-testimonials {
+      flex-direction: column;
+    }
+  
+    .timeline-wrap {
+      padding: 0.5em;
+    }
+  
+    .event {
+      flex: 0 0 220px;
+    }
+  
+    .mosaic img {
+      width: 45%;
+    }
+  
+    .footer-inner {
+      flex-direction: column;
+      gap: 0.5em;
+      text-align: center;
+    }
+  }
+  
