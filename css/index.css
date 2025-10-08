@@ -1,4 +1,3 @@
-
 /* === Estilos Globales === */
 body {
     font-family: Arial, sans-serif;
@@ -57,43 +56,78 @@ header nav a:hover {
 /* === BANNER con carrusel animado === */
 .banner {
     position: relative;
-    height: 250px;
+    height: 300px;
     overflow: hidden;
 }
 
+/* Slides */
 .banner .slide {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: #333;
-    color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: #fff;
     opacity: 0;
     animation: fade 12s infinite;
+    background-color: #000;
 }
 
+.banner .slide img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    opacity: 0.5;
+}
+
+.banner .slide h2 {
+    z-index: 1;
+    font-size: 2em;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+}
+
+.banner .slide button {
+    z-index: 1;
+    padding: 10px 16px;
+    background: #111;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.banner .slide button:hover {
+    background: #f0c040;
+    color: #111;
+}
+
+/* Animaciones por slide */
+.banner .slide:nth-child(1) {
+    animation-delay: 0s;
+}
 .banner .slide:nth-child(2) {
     animation-delay: 4s;
 }
-
 .banner .slide:nth-child(3) {
     animation-delay: 8s;
 }
 
-.banner h2 {
-    font-size: 1.8em;
-    margin-bottom: 8px;
-}
-
+/* Animación fade */
 @keyframes fade {
-    0% {opacity: 0;}
-    10% {opacity: 1;}
-    30% {opacity: 1;}
-    40% {opacity: 0;}
-    100% {opacity: 0;}
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    30% { opacity: 1; }
+    40% { opacity: 0; }
+    100% { opacity: 0; }
 }
 
 /* === GRID de relojes destacados (catálogo general) === */
